@@ -1,19 +1,10 @@
 import React from 'react';
+import { ButtonProps } from '@/interfaces';
 
-interface ButtonProps {
-    label: string;
-    onClick: () => void;
-    disabled?: boolean;
-    children: React.ReactNode;
-    size?: string;
-    color?: string;
-    loading?: boolean;
-}
-
-const Button: React.FC<ButtonProps> = ({ label, onClick, disabled, children, size, color, loading }: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({ title, styles }) => {
     return (
-        <button onClick={onClick} disabled={disabled} style={{ padding: '10px 20px', borderRadius: '5px', backgroundColor: color || '#0070f3', color: '#fff', border: 'none', cursor: 'pointer', fontSize: size }}>
-            {loading ? 'Loading...' : children}
+        <button className={`px-4 py-2 bg-blue-500 text-white font-medium hover:bg-blue-600 transition-colors ${styles}`}>
+            {title}
         </button>
     );
 };

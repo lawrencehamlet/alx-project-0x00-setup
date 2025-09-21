@@ -1,11 +1,11 @@
 import React from 'react';
 
-const IndexPage = () => {
+const Home: React.FC = () => {
     return (
         <div>
-            <h1>Welcome to the Index Page</h1>
+            <h1>Airbnb Application Clone system</h1>
         </div>
     );
 };
 
-export default IndexPage;
+export default Home;
